@@ -47,9 +47,9 @@ export function Projects({ onViewGallery }: ProjectsProps) {
 
         <div className="grid md:grid-cols-2 gap-8">
           {displayedProjects.map((project) => {
-            const firstMedia = project.images[0];
-            const mediaUrl =
-              typeof firstMedia === "string" ? firstMedia : firstMedia.src;
+            const firstMedia = project.images[0]!;
+const mediaUrl =
+  typeof firstMedia === "string" ? firstMedia : firstMedia.src;
 
             const isYouTube =
               mediaUrl.includes("youtube.com") || mediaUrl.includes("youtu.be");

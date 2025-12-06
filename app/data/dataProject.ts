@@ -295,7 +295,7 @@ const galleryProjects = [
     fullDescription:
       "Pour notre projet de fin de deuxième année, nous avons dû réaliser en groupe un court-métrage d’environ 45 secondes, développé tout au long de l’année. La thématique imposée était la création d’un environnement sur le thème du laboratoire, mais nous avions carte blanche pour le reste du projet. Nous avons alors imaginé l’histoire d’un robot qui se réveille dans un laboratoire abandonné, à court d’énergie. Il part à la recherche d’une source de recharge, mais au fil de son exploration, il découvre des éléments de plus en plus étranges. En entendant un bruit inquiétant, il décide d’en trouver la source… avant de se retrouver face à un monstre qui finit par le détruire. Sur ce projet, j’ai réalisé l’ensemble des concepts 2D des assets ainsi que les concepts de colorisation. J’ai ensuite modélisé une partie des éléments choisis, puis assuré le texturing complet, aussi bien pour les assets que pour les personnages (le monstre, la pie et le robot). Enfin, j’ai également pris en charge le montage audio du court-métrage. Ce projet a été réalisé en collaboration avec Gauthier Picherit Brisset et Nicolas Granier.",
     images: [ Affiche ,Rendu, Rendu1, Rendu2,,"https://www.youtube.com/watch?v=5CIEhrr6jHY","https://www.youtube.com/watch?v=1f0ODLj8FxE"],
-    tags: ["3D", "2D", "Character Design", "Environnement", "Texturing", "Concept", "Props", "Sculpt", "Stylised", "Animation", "Rig&skin", "Lighting", "2024", "2025", "Hand Painting"],
+    tags: ["3D", "Character Design", "Environnement", "Texturing", "Concept", "Props", "Sculpt", "Stylised", "Animation", "Rig&skin", "Lighting", "2024", "2025", "Hand Painting"],
     software: "Maya - Substance Painter - Unreal - Premiere Pro, CLIP STUDIO PAINT - Pro Create - Zbrush",
   },
   {
@@ -361,7 +361,7 @@ const galleryProjects = [
     fullDescription:
       "J’ai réalisé ce dessin dans le cadre d’un concours entre amis sur le thème d’Among Us. L’objectif était de représenter son personnage dans l’univers du jeu vidéo, en apportant sa propre interprétation créative.",
     images: [AmonUsPictures],
-    tags: ["2D", "Character Design", "Environnement" , "Texturing ", "Concept ", "Anime Style", "Lighting", "Hand Painting", "Digital Painting ", "2024"],
+    tags: ["2D", "Character Design", "Environnement" , "Texturing ", "Concept ", "Anime Style", "Lighting", "Hand Painting", "Digital Painting", "2024"],
     software: "CLIP STUDIO PAINT",
   },
   {

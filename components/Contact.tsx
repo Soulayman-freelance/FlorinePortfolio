@@ -76,10 +76,10 @@ export function Contact() {
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Travaillons ensemble
+            Contactez moi
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un projet en tête ? Une collaboration à proposer ? N'hésitez pas à me contacter !
+            Une question ? Une collaboration ? Contactez moi !
           </p>
         </div>
 

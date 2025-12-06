@@ -1,4 +1,4 @@
-import { Menu, X, Sparkles, Image } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 import { useState } from "react";
 
 export function Navigation() {
@@ -10,7 +10,6 @@ export function Navigation() {
     { name: "Compétences", href: "#skills" },
     { name: "Mon parcours", href: "#experience" },
     { name: "Projets", href: "#projects" },
-    { name: "Testimonials", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
 

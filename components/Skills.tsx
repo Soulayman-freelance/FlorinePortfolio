@@ -4,7 +4,7 @@ export function Skills() {
   const services = [
     {
       icon: Brush,
-      title: "Modélisation 3D",
+      title: "Modélisation 2D",
       description:
         "Je crée des personnages 2D avec personnalité et charme, pour des illustrations ou des animations !",
       features: ["Personnages", "Animaux", "Colorisation", "Concept"],

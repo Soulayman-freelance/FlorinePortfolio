@@ -30,6 +30,8 @@ import Robot1 from "@/public/assets/texturing/Robot1.png";
 import Rendu from "@/public/assets/texturing/Rendu.png";
 import Rendu1 from "@/public/assets/texturing/Rendu1.png";
 import Rendu2 from "@/public/assets/texturing/Rendu2.png";
+import Affiche from "@/public/assets/Affiche.png";
+
 // id 13
 import Sculpt1 from "@/public/assets/sculpture/Sculpt1.jpg";
 import Sculpt2 from "@/public/assets/sculpture/Sculpt2.jpg";
@@ -148,7 +150,7 @@ const galleryProjects = [
     images: [Camping1, Camping2],
 
     tags: ["3D", "Environnement", "Texturing", "Props", "Sculpt", "Stylised", "Lighting", "2025"],
-    software: "Maya - Substance Painter",
+    software: "Maya - Substance Painter - Zbrush",
   },
   {
     id: 4,
@@ -199,7 +201,7 @@ const galleryProjects = [
     description:
       "Au cours de ma première année d’études, j’ai dû réaliser un Pokémon en sculpt. J’ai choisi Mimikyu, un Pokémon qui me tient particulièrement à coeur.",
     fullDescription:
-      "Au cours de ma première année d’études, j’ai dû réaliser un Pokémon en sculpt. J’ai choisi Mimikyu, un Pokémon qui me tient particulièrement à coeur. L’objectif de cet exercice était de nous entraîner à la sculpt, sans aller plus loin. Ce projet m’a permis de découvrir les bases du sculpt et de me familiariser avec les volumes et les formes.",
+      "Au cours de ma première année d’études, j’ai dû réaliser un Pokémon en sculpt. J’ai choisi Mimikyu, un Pokémon qui me tient particulièrement à coeur. L’objectif de cet exercice était de nous entrainer au sculpt, sans aller plus loin. Ce projet m’a permis de découvrir les bases du sculpt et de me familiariser avec les volumes et les formes.",
     images: [Mimikyu],
 
     tags: ["3D", "Character Design", "Sculpt", "2023"],
@@ -232,8 +234,21 @@ const galleryProjects = [
     software: "Zbrush - Maya - Substance Painter",
   },
   {
+    id: 17,
+    title: "Chavalier de la Clochette Ronde",
+    category: "Projet Groupe",
+    date: "10/2023",
+    description:
+      "Nous étions trois à réaliser ce projet en l’espace d’une semaine lors de nos Ymmersions en deuxième année.",
+    fullDescription:
+      "Nous étions trois à réaliser ce projet en l’espace d’une semaine lors de nos Ymmersions en deuxième année. La thématique imposée était la création d’un environnement médiéval fantastique, avec pour contrainte d’y intégrer une armure. Nous sommes alors parti sur un chat avec une armure qui traverse un portail entre deux dimensions, mais reste bloqué à l'intérieur de celui-ci. Dans ce projet, j’ai conçu le portail, le chevalier, ainsi que les poules et les poussins. J’ai également réalisé le texturing des environnements, ainsi que celui des poules et des poussins. Je me suis aussi occupée de réaliser la bande son. Dans ce projet, j'étais accompagné par Marine Dupuy et Gauthier Picherit Brisset.",
+    images: [Chevalier1, Chevalier2, Chevalier3],
+    tags: ["3D", "2D", "Character Design", "Concept", "2024" , "Animation", "Stylised", "Props", "Environnement", "Texturing", "Lighting"],
+    software: "Maya - Substance Painter - Unreal - Premiere Pro - ProCreate",
+  },
+  {
     id: 10,
-    title: "Crane sculpt",
+    title: "Sculpt Crâne",
     category: "Projet Solo",
     date: "11/2023",
     description:
@@ -241,14 +256,14 @@ const galleryProjects = [
     fullDescription:
       "Lors de ma première année d’études, nous devions réaliser un crâne en 3D afin d’apprendre et de comprendre les bases de l’anatomie humaine.",
     images: [SculptCrane],
-    tags: ["3D", "Texturing", "Props", "Stylised", "Hand Painting", "2023"],
+    tags: ["3D", "Props", "Sculpt", "2023"],
     software: "Maya - Substance Painter",
   },
   {
     id: 11,
     title: "Texturing robot NEX0",
-    category: "Projet Solo",
-    date: "11/2023",
+    category: "Projet Groupe",
+    date: "09/2024 - 06/2025",
     description:
       "J’ai réalisé le texturing du robot NEX0 entièrement à la main, afin de lui donner un effet handpainting.",
     fullDescription:
@@ -258,17 +273,43 @@ const galleryProjects = [
     software: "Maya - Substance Painter",
   },
   {
+    id: 48,
+    title: "Texturing asset projet final",
+    category: "Projet Solo",
+    date: "04/2025",
+    description:
+      "Voici l’un des assets que j’ai texturé pour notre projet final.",
+    fullDescription:
+      "Voici l’un des assets que j’ai texturé pour notre projet final. Nous avons opté pour un style handpainting, et cet asset étant l’un des plus colorés de la scène, il était important que ses couleurs restent chaudes pour renforcer l’harmonie et l’ambiance générale.",
+    images: [Asset],
+    tags: ["3D", "Texturing", "Props", "Stylised", "Hand Painting", "2025"],
+    software: "Maya - Substance Painter",
+  },
+  {
     id: 12,
-    title: "Projet final 2ème année",
+    title: "The last of Robot",
     category: "Projet Groupe",
-    date: "09/2024 - 6/2025",
+    date: "09/2024 - 06/2025",
     description:
       "Pour notre projet de fin de deuxième année, nous avons dû réaliser en groupe un court-métrage d’environ 45 secondes, développé tout au long de l’année.",
     fullDescription:
       "Pour notre projet de fin de deuxième année, nous avons dû réaliser en groupe un court-métrage d’environ 45 secondes, développé tout au long de l’année. La thématique imposée était la création d’un environnement sur le thème du laboratoire, mais nous avions carte blanche pour le reste du projet. Nous avons alors imaginé l’histoire d’un robot qui se réveille dans un laboratoire abandonné, à court d’énergie. Il part à la recherche d’une source de recharge, mais au fil de son exploration, il découvre des éléments de plus en plus étranges. En entendant un bruit inquiétant, il décide d’en trouver la source… avant de se retrouver face à un monstre qui finit par le détruire. Sur ce projet, j’ai réalisé l’ensemble des concepts 2D des assets ainsi que les concepts de colorisation. J’ai ensuite modélisé une partie des éléments choisis, puis assuré le texturing complet, aussi bien pour les assets que pour les personnages (le monstre, la pie et le robot). Enfin, j’ai également pris en charge le montage audio du court-métrage. Ce projet a été réalisé en collaboration avec Gauthier Picherit Brisset et Nicolas Granier.",
-    images: [Rendu, Rendu1, Rendu2],
+    images: [ Affiche ,Rendu, Rendu1, Rendu2, "@/public/assets/Screen1.mp4","@/public/assets/Screen2.mp4","@/public/assets/TLOR_PRES.mp4","@/public/assets/TLOR_Final.mp4"],
     tags: ["3D", "2D", "Character Design", "Environnement", "Texturing", "Concept", "Props", "Sculpt", "Stylised", "Animation", "Rig&skin", "Lighting", "2024", "2025", "Hand Painting"],
-    software: "Maya - Substance Painter - Unreal - Premiere Pro",
+    software: "Maya - Substance Painter - Unreal - Premiere Pro, CLIP STUDIO PAINT - Pro Create - Zbrush",
+  },
+  {
+    id: 15,
+    title: "Projet YES YNOV",
+    category: "Projet Groupe",
+    date: "05/2025",
+    description:
+      "Lors de notre deuxième année d’études, l’école YNOV nous a proposé un concours en partenariat avec EPIC GAMES sur leur jeu Fortnite.",
+    fullDescription:
+      "Lors de notre deuxième année d’études, l’école YNOV nous a proposé un concours en partenariat avec EPIC GAMES sur leur jeu Fortnite.L’objectif était de réaliser une map jouable en utilisant les assets du jeu sur UNREAL FOR FORTNITE. Avec notre groupe, nous avons créé un environnement inspiré d’Alice au pays des merveilles et d’Alice de l’autre côté du miroir. Nous avons imaginé un grand manoir rempli de références à l’univers, et conçu un gameplay mêlant Prop Hunt et Murder (inspiré du jeu Garry’s Mod) : le but était pour les joueurs de se cacher en objets afin d’échapper au chasseur, tandis que l’un d’entre eux pouvait récupérer une arme dans le monde inversé, de l’autre côté du miroir, pour éliminer le chasseur. Notre projet a été sélectionné et nous avons eu la chance de présenter notre map à Paris, sur le campus YNOV Paris. Bien que nous n’ayons pas remporté le prix final, cette expérience a été extrêmement enrichissante et stimulante. Nous étions quatre à réaliser ce projet : Estelle Subra, Cam’ron Givord, Yanis Rebeihi et moi, Florine Perreaut.",
+    images: ["https://www.youtube.com/watch?v=FvR-aI4sMMU"],
+    tags: ["3D", "Environnement", "Texturing", "Props", "Animation", "Lighting", "2025"],
+    software: "Maya - UEFN  (UNREAL FOR FORNITE) - Premiere Pro",
   },
   {
     id: 13,
@@ -294,19 +335,7 @@ const galleryProjects = [
     images: [DemonFruit],
     tags: ["3D", "Texturing", "Props", "Sculpt", "2023"],
   },
-  {
-    id: 15,
-    title: "Projet YES YNOV",
-    category: "Projet Groupe",
-    date: "05/2025",
-    description:
-      "Lors de notre deuxième année d’études, l’école YNOV nous a proposé un concours en partenariat avec EPIC GAMES sur leur jeu Fortnite.",
-    fullDescription:
-      "Lors de notre deuxième année d’études, l’école YNOV nous a proposé un concours en partenariat avec EPIC GAMES sur leur jeu Fortnite.L’objectif était de réaliser une map jouable en utilisant les assets du jeu sur UNREAL FOR FORTNITE. Avec notre groupe, nous avons créé un environnement inspiré d’Alice au pays des merveilles et d’Alice de l’autre côté du miroir. Nous avons imaginé un grand manoir rempli de références à l’univers, et conçu un gameplay mêlant Prop Hunt et Murder (inspiré du jeu Garry’s Mod) : le but était pour les joueurs de se cacher en objets afin d’échapper au chasseur, tandis que l’un d’entre eux pouvait récupérer une arme dans le monde inversé, de l’autre côté du miroir, pour éliminer le chasseur. Notre projet a été sélectionné et nous avons eu la chance de présenter notre map à Paris, sur le campus YNOV Paris. Bien que nous n’ayons pas remporté le prix final, cette expérience a été extrêmement enrichissante et stimulante. Nous étions quatre à réaliser ce projet : Estelle Subra, Cam’ron Givord, Yanis Rebeihi et moi, Florine Perreaut.",
-    images: ["https://www.youtube.com/watch?v=FvR-aI4sMMU"],
-    tags: ["3D", "Environnement", "Texturing", "Props", "Animation", "Lighting", "2025"],
-    software: "Maya - UEFN  (UNREAL FOR FORNITE) - Premiere Pro",
-  },
+  
   {
     id: 16,
     title: "Projet 48h",
@@ -316,23 +345,11 @@ const galleryProjects = [
       "J’ai réalisé ce projet de groupe lors de ma deuxième année d’études. Le but était de créer une vidéo sur le thème du Cham’s Call, en nous inspirant du style et des oeuvres de l’artiste Maurits Cornelis Escher.",
     fullDescription:
       "J’ai réalisé ce projet de groupe lors de ma deuxième année d’études. Le but était de créer une vidéo sur le thème du Cham’s Call, en nous inspirant du style et des oeuvres de l’artiste Maurits Cornelis Escher. Nous disposions de 48 heures seulement pour concevoir le projet de A à Z : de l’idée initiale à la production finale. Nous étions une équipe de cinq personnes : Nicolas Granier, Estelle Subra, Gaël Cayssials, Adrian Roques-Valle et moi-même, Florine Perreaut.",
-    images: ["/assets/animation/Cham's Call Challenge _1_1.mp4", "/assets/animation/ChasmsCall.mp4"],
+    images: ["/assets/animation/ChasmsCall.mp4", "/assets/animation/Cham's Call Challenge _1_1.mp4",],
     tags: ["3D", "Environnement", "Texturing", "Props", "Animation", "Rig & Skin", "Lighting", "2025"],
     software: "Maya - Substance Painter - Unreal - Premiere Pro",
   },
-  {
-    id: 17,
-    title: "Chavalier de la Clochette Ronde",
-    category: "Projet Groupe",
-    date: "10/2023",
-    description:
-      "Nous étions trois à réaliser ce projet en l’espace d’une semaine lors de nos Ymmersions en deuxième année.",
-    fullDescription:
-      "Nous étions trois à réaliser ce projet en l’espace d’une semaine lors de nos Ymmersions en deuxième année. La thématique imposée était la création d’un environnement médiéval fantastique, avec pour contrainte d’y intégrer une armure. Nous sommes alors parti sur un chat avec une armure qui traverse un portail entre deux dimensions, mais reste bloqué à l'intérieur de celui-ci. Dans ce projet, j’ai conçu le portail, le chevalier, ainsi que les poules et les poussins. J’ai également réalisé le texturing des environnements, ainsi que celui des poules et des poussins. Je me suis aussi occupée de réaliser la bande son. Dans ce projet, j'étais accompagné par Marine Dupuy et Gauthier Picherit Brisset.",
-    images: [Chevalier1, Chevalier2, Chevalier3],
-    tags: ["3D", "2D", "Character Design", "Concept", "2024" , "Animation", "Stylised", "Props", "Environnement", "Texturing", "Lighting"],
-    software: "Maya - Substance Painter - Unreal - Premiere Pro - ProCreate",
-  },
+  
   // 2D PROJECT
 {
     id: 18,
@@ -370,7 +387,7 @@ const galleryProjects = [
     fullDescription:
       "J’ai réalisé ce dessin dans le but de m’entraîner à l’anatomie ainsi qu’au lighting. Pour ce projet, je suis complètement sortie de ma zone de confort, en expérimentant plusieurs techniques de colorisation pour obtenir le rendu souhaité. J’ai également effectué de nombreuses recherches anatomiques et sollicité plusieurs retours critiques, afin de créer une représentation juste et cohérente d’un corps féminin musclé. Ce travail m’a permis de progresser tant sur la précision anatomique que sur la maîtrise de la lumière et des volumes.",
     images: [OCAmichii],
-    tags: ["3D", "Character Design", "Concept", "Anime Style", "Digital Painting", "Lighting", "2025"],
+    tags: ["2D", "Character Design", "Concept", "Anime Style", "Digital Painting", "Hand Painting", "Lighting", "2025"],
     software: "CLIP STUDIO PAINT",
   },
   {
@@ -388,7 +405,7 @@ const galleryProjects = [
   },
   {
     id: 22,
-    title: "Plantes",
+    title: "Concept de plantes",
     category: "Projet Solo",
     date: "02/2024",
     description:
@@ -397,6 +414,7 @@ const galleryProjects = [
       "J’ai réalisé ce devoir lors de ma deuxième année d’études, dont l’objectif était de s’entraîner à créer de la verdure pour un projet d’environnement. Nous devions tout d’abord dessiner plusieurs plantes, puis, à partir de leurs shapes, en sélectionner trois pour réaliser un rendu final en couleur, sans trop de line apparent. Ce projet m’a permis de travailler la diversité des formes végétales, ainsi que la couleur et la composition, afin de créer des éléments cohérents et visuellement intéressants pour un environnement 3D ou illustratif.",
     images: [Plantes],
     tags: ["2D", "Environnement", "Concept", "Digital Painting", "2024"],
+    software: ["CLIP STUDIO PAINT"]
   },
   {
     id: 23,
@@ -406,9 +424,10 @@ const galleryProjects = [
     description:
       "En première année, nous avons dû réaliser une refonte du jeu Grindstone. L’objectif était de recréer entièrement le plateau, incluant le décor, le personnage et les monstres.",
     fullDescription:
-      "En première année, nous avons dû réaliser une refonte du jeu Grindstone. L’objectif était de recréer entièrement le plateau, incluant le décor, le personnage et les monstres. J’ai choisi un thème asiatique, inspiré du Japon, et j’ai conçu un environnement aux teintes pastel, créant une ambiance douce et harmonieuse. Chaque asset a été conçu individuellement avant d’être assemblé, ce qui a permis d’obtenir un rendu final cohérent et détaillé.Ce projet m’a permis de travailler la composition d’environnement et l’harmonisation des couleurs pour un univers immersif.",
+      "En première année, nous avons dû réaliser une refonte du jeu Grindstone. L’objectif était de recréer entièrement le plateau, incluant le décor, le personnage et les monstres. J’ai choisi un thème asiatique, inspiré du Japon, et j’ai conçu un environnement aux teintes pastel, créant une ambiance douce et harmonieuse. Chaque asset a été conçu individuellement avant d’être assemblé, ce qui a permis d’obtenir un rendu final cohérent et détaillé. Ce projet m’a permis de travailler la composition d’environnement et l’harmonisation des couleurs pour un univers immersif.",
     images: [Grindstone],
     tags: ["2D", "Environnement", "Texturing", "Props", "Stylised", "Lighting" , "Digital Painting", "2024"],
+    software: ["CLIP STUDIO PAINT"]
   },
   {
     id: 24,
@@ -432,7 +451,7 @@ const galleryProjects = [
     fullDescription:
       "J’ai réalisé ce dessin d’une amie en utilisant de l’aquarelle. L’objectif était de m’entraîner à cette technique, afin de mieux comprendre le mélange des couleurs et la gestion des dégradés et transparences propres à l’aquarelle.",
     images: [Aquarelle],
-    tags: ["3D", "2D", "Character Design", "Environnement", "Texturing", "Concept" , "Props", "Sculpt", "Stylised", "Anime Style", "Animation", "Rig & Skin", "Lighting", "Hand Painting", "Aquarelle", "Line", "2023",],
+    tags: ["2D", "Character Design", "Environnement", "Texturing", "Concept" , "Props", "Anime Style", "Hand Painting", "Aquarelle", "Line", "2023",],
   },
   {
     id: 26,
@@ -444,7 +463,7 @@ const galleryProjects = [
     fullDescription:
       "J’ai réalisé ce dessin en m’inspirant de la YouTubeuse Natoo. Sa vibe et son attitude lors d’une de ses vidéos m’ont beaucoup inspirée, et j’ai particulièrement apprécié l’assemblage des couleurs, les accessoires, la coiffure et le maquillage. J’ai choisi de le réaliser à l’aquarelle, afin d’obtenir des teintes riches et de pouvoir expérimenter de belles superpositions de couleurs, renforçant ainsi la profondeur et l’ambiance du portrait.",
     images: [Nathalie],
-    tags: ["2D", "Character Design", "Concept", "Anime Style" , "Animation", "Line", "Aquarelle", "Lighting", "2025",],
+    tags: ["2D", "Character Design", "Concept", "Anime Style", "Line", "Aquarelle", "Lighting", "2025",],
   },
   
   {
@@ -677,7 +696,7 @@ const galleryProjects = [
   },
   {
     id: 46,
-    title: "À la fenetre",
+    title: "À la fenêtre",
     category: "Projet Solo",
     date: "05/2022",
     description:
@@ -699,18 +718,6 @@ const galleryProjects = [
     images: [Ghost, Ghost1, Ghost2],
     tags: ["Photographie", "Personne"],
   },
-  {
-    id: 48,
-    title: "Texturing asset projet final",
-    category: "Projet Solo",
-    date: "04/2025",
-    description:
-      "Voici l’un des assets que j’ai texturé pour notre projet final.",
-    fullDescription:
-      "Voici l’un des assets que j’ai texturé pour notre projet final. Nous avons opté pour un style handpainting, et cet asset étant l’un des plus colorés de la scène, il était important que ses couleurs restent chaudes pour renforcer l’harmonie et l’ambiance générale.",
-    images: [Asset, FPChambre1],
-    tags: ["3D", "Texturing", "Props", "Stylised", "Hand Painting", "2025"],
-    software: "Maya - Substance Painter",
-  },
+  
 ];
 export default galleryProjects;

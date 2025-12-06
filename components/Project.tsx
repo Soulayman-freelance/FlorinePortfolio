@@ -10,9 +10,19 @@ interface ProjectsProps {
 }
 
 export function Projects({ onViewGallery }: ProjectsProps) {
-  // Prendre les 4 premiers projets pour l'affichage sur la page d'accueil
-  const displayedProjects = galleryProjects.slice(0, 4);
 
+  const selectedIds = [9, 35, 41, 20];
+
+  const displayedProjects = selectedIds
+    .map(id => galleryProjects.find(p => p.id === id))
+    .filter((p): p is NonNullable<typeof p> => p !== undefined);
+
+  const slugify = (str: string) =>
+    str
+      .toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)+/g, "");
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -21,8 +31,9 @@ export function Projects({ onViewGallery }: ProjectsProps) {
             Mes Projets
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-            Voici tout mes projets !
+            Voici mes projets sélectionnés !
           </p>
+
           {onViewGallery && (
             <Button
               onClick={onViewGallery}
@@ -57,7 +68,7 @@ export function Projects({ onViewGallery }: ProjectsProps) {
             }
 
             return (
-              <Link key={project.id} href={`/mes-projets/${project.id}`}>
+              <Link key={project.id} href={`/mes-projets/${slugify(project.title)}`}>
                 <div className="bg-white rounded-3xl overflow-hidden border-2 border-primary/20 hover:border-primary/40 transition-all group hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 cursor-pointer">
                   <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
                     {isYouTube && youtubeId ? (
@@ -91,13 +102,16 @@ export function Projects({ onViewGallery }: ProjectsProps) {
                       </span>
                     </div>
                   </div>
+
                   <div className="p-6 space-y-4">
                     <h3 className="text-primary">{project.title}</h3>
                     <p className="text-foreground/70">{project.description}</p>
+
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Calendar size={14} />
                       {project.date}
                     </div>
+
                     <div className="flex flex-wrap gap-2">
                       {project.tags.slice(0, 4).map((tag, tagIndex) => (
                         <span
@@ -113,6 +127,7 @@ export function Projects({ onViewGallery }: ProjectsProps) {
                         </span>
                       )}
                     </div>
+
                     <div className="flex gap-3 pt-2">
                       <Button
                         size="sm"
@@ -121,6 +136,7 @@ export function Projects({ onViewGallery }: ProjectsProps) {
                         <Eye size={16} />
                         View Project
                       </Button>
+
                       <Button
                         variant="outline"
                         size="sm"

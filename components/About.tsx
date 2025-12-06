@@ -1,9 +1,9 @@
-import { Award, Book, Heart, Palette } from "lucide-react";
+import { Book, Heart, Palette } from "lucide-react";
 
 export function About() {
   const stats = [
     { icon: Book, value: "3ème", label: "Année d'étude" },
-    { icon: Palette, value: "+5", label: "Projets créer" },
+    { icon: Palette, value: "+30", label: "Projets créer" },
     { icon: Heart, value: "∞", label: "Passion" },
   ];
 
@@ -12,7 +12,7 @@ export function About() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center pb-12">
           <h2 className="text-4xl md:text-5xl pb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-snug md:leading-normal">
-            A propos de moi
+            À propos de moi
           </h2>
 
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -37,7 +37,7 @@ export function About() {
               pouvais aborder.
             </p>
             <p className="text-foreground/80">
-              En 2024, me voilà en école d’art à créer tout ce qui me passe par
+              En 2023, me voilà en école d’art à créer tout ce qui me passe par
               la tête avec des couleurs, des formes et des styles différents à
               chacune de mes œuvres.
             </p>

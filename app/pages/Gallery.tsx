@@ -11,7 +11,6 @@ export default function GalleryPage() {
   const allTags = Array.from(
     new Set(galleryProjects.flatMap((project) => project.tags))
   );
-  const tags = ["All", ...allTags];
 
   const [selectedTag, setSelectedTag] = React.useState("All");
 
@@ -33,7 +32,7 @@ export default function GalleryPage() {
                 className="gap-2 border-primary/30 hover:bg-primary/5"
               >
                 <ArrowLeft size={20} />
-                Retour à l'accueil
+                Retour à l&apos;accueil
               </Button>
             </Link>
             <h2 className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -45,29 +44,42 @@ export default function GalleryPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-6xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            My 3D Art Gallery
+          <h1 className="text-5xl md:text-6xl pb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Tout mes projets !
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A collection of all my 3D projects, experiments, and creative
-            adventures! ✨
+            Une collection de tout les projets réalisés
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {tags.map((tag) => (
-            <button
-              key={tag}
-              onClick={() => setSelectedTag(tag)}
-              className={`px-6 py-3 rounded-full transition-all ${
-                selectedTag === tag
-                  ? "bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-primary/30"
-                  : "bg-white text-foreground border-2 border-primary/20 hover:border-primary/40"
-              }`}
+        <div className="relative max-w-md mx-auto mb-12">
+          <select
+            value={selectedTag}
+            onChange={(e) => setSelectedTag(e.target.value)}
+            className="w-full px-6 py-4 text-lg rounded-full border-2 border-primary/20 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 bg-white appearance-none cursor-pointer transition-all"
+          >
+            <option value="All">Toutes les catégories</option>
+            {allTags.map((tag) => (
+              <option key={tag} value={tag}>
+                {tag}
+              </option>
+            ))}
+          </select>
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+            <svg
+              className="w-5 h-5 text-primary"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              {tag}
-            </button>
-          ))}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -92,8 +104,19 @@ export default function GalleryPage() {
               }
             }
 
+            const slugify = (str: string): string =>
+              str
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/(^-|-$)+/g, "");
+
             return (
-              <Link key={project.id} href={`/mes-projets/${project.id}`}>
+              <Link
+                key={project.title}
+                href={`/mes-projets/${slugify(project.title)}`}
+              >
                 <div className="bg-white rounded-3xl overflow-hidden border-2 border-primary/20 hover:border-primary/40 transition-all group hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2 cursor-pointer">
                   <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
                     {isYouTube && youtubeId ? (

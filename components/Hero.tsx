@@ -1,4 +1,5 @@
-import { ArrowRight, Linkedin, Instagram, Mail, Sparkles } from "lucide-react";
+import { ArrowRight, Linkedin, Instagram, Mail } from "lucide-react";
+import { Heart } from "lucide-react";
 import { FaArtstation } from "react-icons/fa";
 import Image from "next/image";
 import { Button } from "./ui/button";
@@ -29,7 +30,7 @@ export function Hero() {
           <div className="space-y-6">
             <div className="space-y-4">
               <p className="text-muted-foreground flex items-center gap-2">
-                <Sparkles size={18} className="text-primary" />
+              <Heart size={16} className="fill-white/60" />
                 Hello ! Je suis
               </p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -41,7 +42,7 @@ export function Hero() {
             </div>
 
             <p className="text-lg text-foreground/70 max-w-xl">
-              Actuellement en troisième année d’études en design 3D, j’adore
+              Actuellement en 3ème année d&apos;études en animation 3D jeux vidéos, j’adore
               créer des personnages mignons, des environnements oniriques et
               donner vie à l’imagination grâce à l’art 3D
             </p>
@@ -83,18 +84,24 @@ export function Hero() {
               </a>
               <a
                 href="https://www.linkedin.com/in/florine-perreaut-2642b330a/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-colors"
               >
                 <Linkedin size={24} />
               </a>
               <a
                 href="https://www.youtube.com/@amichii1557"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-colors"
               >
                 <FaYoutube size={24} />
               </a>
               <a
                 href="mailto:floriineperreaut@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-colors"
               >
                 <Mail size={24} />

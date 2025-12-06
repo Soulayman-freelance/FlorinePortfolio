@@ -1,7 +1,6 @@
 import { Heart, MailIcon } from "lucide-react";
 import { FaYoutube, FaArtstation, FaLinkedin, FaInstagram } from "react-icons/fa6";
 export function Footer() {
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gradient-to-r from-primary to-secondary text-white py-12 px-4 sm:px-6 lg:px-8">
@@ -10,7 +9,7 @@ export function Footer() {
           <div className="text-center md:text-left">
             <h3 className="mb-2">Florine PERREAUT</h3>
             <p className="text-white/80 flex items-center gap-2 justify-center md:justify-start">
-              Designer 3D & Artiste numérique{" "}
+              Florine Perreaut Designer 3D{" "}
               <Heart size={16} className="fill-white/60" />
             </p>
           </div>
@@ -33,18 +32,24 @@ export function Footer() {
               </a>
               <a
                 href="https://www.linkedin.com/in/florine-perreaut-2642b330a/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-colors"
               >
                 <FaLinkedin size={24} />
               </a>
               <a
                 href="https://www.youtube.com/@amichii1557"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-colors"
               >
                 <FaYoutube size={24} />
               </a>
               <a
                 href="mailto:floriineperreaut@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground/70 hover:text-primary transition-colors"
               >
                 <MailIcon size={24} />
@@ -53,7 +58,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/20 text-center text-white/80">
-          <p>© {currentYear} Made with love and lots of Blender ✨</p>
+          <p>Merci de votre visite. N’hésitez pas à me contacter pour toute collaboration.</p>
         </div>
       </div>
     </footer>

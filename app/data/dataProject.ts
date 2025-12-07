@@ -50,6 +50,8 @@ import AmongUs2 from "@/public/assets/img/amongus2.png";
 
 // id 19 - Croquis personnage (besoin des images)
 import CroquisPerso from "@/public/assets/Illustration/CroquisPerso.jpg";
+import CroquisPerso1 from "@/public/assets/img/corquisperso.jpg";
+
 // id 20 - Mon OC Amichii (besoin de l'image)
 import OCAmichii from "@/public/assets/Illustration/OCAmichii.jpg";
 import OCAmichii1 from "@/public/assets/img/oc.png";
@@ -161,7 +163,7 @@ const galleryProjects = [
     description: "J’ai imaginé un environnement doux et accueillant, pensé pour mettre en valeur Calico",
     fullDescription: "J’ai réalisé ce projet personnel au cours de mon passage en troisième année d’études. L’objectif principal était de m’exercer sur plusieurs aspects de la production 3D : le sculpt, la retopologie et l’animation. J’ai imaginé un environnement doux et accueillant, pensé pour mettre en valeur Calico, le petit chat. L’ambiance générale se voulait accueillante avec ses couleurs vives.",
     images: [Camping1, Camping2],
-
+    enCours: true,
     tags: ["3D", "Environnement", "Texturing", "Props", "Sculpt", "Stylised", "Lighting", "2025"],
     software: "Maya - Substance Painter - Zbrush",
   },
@@ -387,7 +389,7 @@ const galleryProjects = [
       "J’ai réalisé ces dessins lors de ma première année d’études, dans le cadre d’un cours de storyboard.",
     fullDescription:
       "J’ai réalisé ces dessins lors de ma première année d’études, dans le cadre d’un cours de storyboard. Nous avions la liberté de créer l’histoire de notre choix, et j’ai donc dessiné tous les personnages présents dans mon scénario et mon storyboard, sous forme de croquis rapides pour capturer leurs gestuels et caractère.",
-    images: [CroquisPerso],
+    images: [CroquisPerso, CroquisPerso1],
     tags: ["2D", "Character Design", "Concept", "Anime Style" , "Digital Painting", "2024"],
     software: "CLIP STUDIO PAINT",
   },

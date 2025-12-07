@@ -74,14 +74,22 @@ export default function ProjectDetailPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-8">
           <div className="space-y-4">
-            <div className="flex flex-wrap items-start gap-4">
-              <h1 className="text-4xl md:text-5xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <div className="flex flex-wrap items-center gap-4">
+              <h1 className="text-4xl md:text-5xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight pb-1">
                 {projectDetails.title}
               </h1>
+
               <span className="px-4 py-2 mt-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full text-sm shadow-lg">
                 {projectDetails.category}
               </span>
+
+              {projectDetails.enCours && (
+                <span className="px-4 py-2 mt-2 bg-white border border-rose-500 text-rose-500 rounded-full text-sm shadow-lg">
+                  Projet en cours
+                </span>
+              )}
             </div>
+
 
             <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
@@ -223,8 +231,8 @@ export default function ProjectDetailPage() {
                         key={index}
                         onClick={() => goToImage(index)}
                         className={`aspect-square relative rounded-xl overflow-hidden border-2 transition-all ${index === currentImageIndex
-                            ? "border-primary shadow-lg shadow-primary/30"
-                            : "border-primary/20 hover:border-primary/40"
+                          ? "border-primary shadow-lg shadow-primary/30"
+                          : "border-primary/20 hover:border-primary/40"
                           }`}
                       >
                         {isYouTube && youtubeThumb ? (

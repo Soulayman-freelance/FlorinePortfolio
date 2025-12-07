@@ -94,82 +94,78 @@ export default function ProjectDetailPage() {
           <div className="relative group">
             <div className="aspect-video relative rounded-3xl overflow-hidden border-2 border-primary/20 shadow-2xl bg-gradient-to-br from-primary/5 to-secondary/5">
               {(() => {
-  const images = projectDetails.images ?? [];
+                const images = projectDetails.images ?? [];
 
-  // 🔒 Si aucun média, on affiche un fallback propre
-  if (images.length === 0) {
-    return (
-      <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-        Aucun média disponible pour ce projet.
-      </div>
-    );
-  }
+                if (images.length === 0) {
+                  return (
+                    <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                      Aucun média disponible pour ce projet.
+                    </div>
+                  );
+                }
 
-  // On essaie de récupérer l'index courant, sinon on retombe sur la première image
-  const currentMedia =
-    images[currentImageIndex] ?? images[0];
+                const currentMedia =
+                  images[currentImageIndex] ?? images[0];
 
-  // Sécurité supplémentaire (au cas où)
-  if (!currentMedia) {
-    return (
-      <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-        Média introuvable.
-      </div>
-    );
-  }
+                if (!currentMedia) {
+                  return (
+                    <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                      Média introuvable.
+                    </div>
+                  );
+                }
 
-  const mediaUrl =
-    typeof currentMedia === "string" ? currentMedia : currentMedia.src;
+                const mediaUrl =
+                  typeof currentMedia === "string" ? currentMedia : currentMedia.src;
 
-  const isYouTube =
-    mediaUrl.includes("youtube.com") || mediaUrl.includes("youtu.be");
+                const isYouTube =
+                  mediaUrl.includes("youtube.com") || mediaUrl.includes("youtu.be");
 
-  const isVideo =
-    mediaUrl.endsWith(".mp4") ||
-    mediaUrl.endsWith(".webm") ||
-    mediaUrl.endsWith(".mov");
+                const isVideo =
+                  mediaUrl.endsWith(".mp4") ||
+                  mediaUrl.endsWith(".webm") ||
+                  mediaUrl.endsWith(".mov");
 
-  if (isYouTube) {
-    let embedUrl = "";
-    if (mediaUrl.includes("youtube.com")) {
-      embedUrl = mediaUrl.replace("watch?v=", "embed/");
-    } else {
-      embedUrl = `https://www.youtube.com/embed/${
-        mediaUrl.split("youtu.be/")[1]
-      }`;
-    }
+                if (isYouTube) {
+                  let embedUrl = "";
+                  if (mediaUrl.includes("youtube.com")) {
+                    embedUrl = mediaUrl.replace("watch?v=", "embed/");
+                  } else {
+                    embedUrl = `https://www.youtube.com/embed/${mediaUrl.split("youtu.be/")[1]
+                      }`;
+                  }
 
-    return (
-      <iframe
-        src={embedUrl}
-        title={`Vidéo - ${projectDetails.title}`}
-        className="w-full h-full"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    );
-  }
+                  return (
+                    <iframe
+                      src={embedUrl}
+                      title={`Vidéo - ${projectDetails.title}`}
+                      className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  );
+                }
 
-  if (isVideo) {
-    return (
-      <video
-        src={mediaUrl}
-        controls
-        className="w-full h-full object-cover"
-      />
-    );
-  }
+                if (isVideo) {
+                  return (
+                    <video
+                      src={mediaUrl}
+                      controls
+                      className="w-full h-full object-cover"
+                    />
+                  );
+                }
 
-  return (
-    <Image
-      src={mediaUrl}
-      alt={`${projectDetails.title} - Image`}
-      fill
-      className="object-contain"
-      priority
-    />
-  );
-})()}
+                return (
+                  <Image
+                    src={mediaUrl}
+                    alt={`${projectDetails.title} - Image`}
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                );
+              })()}
 
 
               {projectDetails.images.length > 1 && (
@@ -195,71 +191,69 @@ export default function ProjectDetailPage() {
           {projectDetails.images.length > 1 && (
             <div className="grid grid-cols-4 md:grid-cols-6 gap-4">
               {projectDetails.images.length > 1 && (
-  <div className="grid grid-cols-4 md:grid-cols-6 gap-4">
-    {projectDetails.images.map((image, index) => {
-      if (!image) return null;
+                <div className="grid grid-cols-4 md:grid-cols-6 gap-4">
+                  {projectDetails.images.map((image, index) => {
+                    if (!image) return null;
 
-      const rawUrl = typeof image === "string" ? image : image.src;
+                    const rawUrl = typeof image === "string" ? image : image.src;
 
-      const isYouTube =
-        rawUrl.includes("youtube.com") || rawUrl.includes("youtu.be");
-      const isVideo =
-        rawUrl.endsWith(".mp4") ||
-        rawUrl.endsWith(".webm") ||
-        rawUrl.endsWith(".mov");
+                    const isYouTube =
+                      rawUrl.includes("youtube.com") || rawUrl.includes("youtu.be");
+                    const isVideo =
+                      rawUrl.endsWith(".mp4") ||
+                      rawUrl.endsWith(".webm") ||
+                      rawUrl.endsWith(".mov");
 
-      // 🔹 Génération de miniature pour YouTube
-      let youtubeThumb: string | null = null;
-      if (isYouTube) {
-        let youtubeId = "";
-        if (rawUrl.includes("youtube.com")) {
-          youtubeId = rawUrl.split("v=")[1]?.split("&")[0] || "";
-        } else if (rawUrl.includes("youtu.be")) {
-          youtubeId = rawUrl.split("youtu.be/")[1]?.split("?")[0] || "";
-        }
+                    let youtubeThumb: string | null = null;
+                    if (isYouTube) {
+                      let youtubeId = "";
+                      if (rawUrl.includes("youtube.com")) {
+                        youtubeId = rawUrl.split("v=")[1]?.split("&")[0] || "";
+                      } else if (rawUrl.includes("youtu.be")) {
+                        youtubeId = rawUrl.split("youtu.be/")[1]?.split("?")[0] || "";
+                      }
 
-        if (youtubeId) {
-          youtubeThumb = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
-        }
-      }
+                      if (youtubeId) {
+                        youtubeThumb = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+                      }
+                    }
 
-      return (
-        <button
-          key={index}
-          onClick={() => goToImage(index)}
-          className={`aspect-square relative rounded-xl overflow-hidden border-2 transition-all ${
-            index === currentImageIndex
-              ? "border-primary shadow-lg shadow-primary/30"
-              : "border-primary/20 hover:border-primary/40"
-          }`}
-        >
-          {isYouTube && youtubeThumb ? (
-            <Image
-              src={youtubeThumb}
-              alt=""
-              fill
-              className="object-cover"
-            />
-          ) : isVideo ? (
-            <video
-              src={rawUrl}
-              className="w-full h-full object-cover"
-              muted
-              playsInline
-            />
-          ) : (
-            <Image
-              src={rawUrl}
-              alt=""
-              fill
-              className="object-cover"
-            />
-          )}
-        </button>
-      );
-    })}
-  </div>
-)}
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => goToImage(index)}
+                        className={`aspect-square relative rounded-xl overflow-hidden border-2 transition-all ${index === currentImageIndex
+                            ? "border-primary shadow-lg shadow-primary/30"
+                            : "border-primary/20 hover:border-primary/40"
+                          }`}
+                      >
+                        {isYouTube && youtubeThumb ? (
+                          <Image
+                            src={youtubeThumb}
+                            alt=""
+                            fill
+                            className="object-cover"
+                          />
+                        ) : isVideo ? (
+                          <video
+                            src={rawUrl}
+                            className="w-full h-full object-cover"
+                            muted
+                            playsInline
+                          />
+                        ) : (
+                          <Image
+                            src={rawUrl}
+                            alt=""
+                            fill
+                            className="object-cover"
+                          />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
 
             </div>
           )}

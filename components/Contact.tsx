@@ -16,14 +16,11 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Créer le contenu de l'email (juste le sujet et le message)
     const emailSubject = encodeURIComponent(formData.subject || "Contact depuis le portfolio");
     const emailBody = encodeURIComponent(formData.message);
 
-    // Ouvrir le client mail par défaut
     window.location.href = `mailto:floriineperreaut@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 
-    // Réinitialiser le formulaire
     setFormData({
       name: "",
       email: "",
@@ -70,7 +67,6 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Background décoratif */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative">
@@ -84,7 +80,6 @@ export function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
-          {/* Informations de contact */}
           <div className="lg:col-span-2 space-y-6">
             <div className="bg-white p-8 rounded-2xl border border-primary/10 shadow-lg">
               <h3 className="text-2xl font-semibold text-primary mb-6">
@@ -124,7 +119,6 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Formulaire de contact */}
           <div className="lg:col-span-3">
             <div className="bg-white p-8 rounded-2xl border border-primary/10 shadow-lg">
               <h3 className="text-2xl font-semibold text-primary mb-6">

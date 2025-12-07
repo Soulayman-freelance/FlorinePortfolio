@@ -45,12 +45,22 @@ import Chevalier2 from "@/public/assets/3d/Chevalier2.jpg";
 import Chevalier3 from "@/public/assets/3d/Chevalier3.jpg";
 // id 18 - Among us Murder (besoin de l'image)
 import AmonUsPictures from "@/public/assets/Illustration/AmonUsPictures.jpg";
+import AmongUs1 from "@/public/assets/img/amongus1.png";
+import AmongUs2 from "@/public/assets/img/amongus2.png";
+
 // id 19 - Croquis personnage (besoin des images)
 import CroquisPerso from "@/public/assets/Illustration/CroquisPerso.jpg";
 // id 20 - Mon OC Amichii (besoin de l'image)
 import OCAmichii from "@/public/assets/Illustration/OCAmichii.jpg";
+import OCAmichii1 from "@/public/assets/img/oc.png";
+import OCAmichii2 from "@/public/assets/img/oc2.png";
+
+
 // id 21 - Les Dissociés (besoin de l'image)
 import Dissociés from "@/public/assets/Illustration/Dissociés.jpg";
+import Dissociés1 from "@/public/assets/img/dissocie1.png";
+import Dissociés2 from "@/public/assets/img/dissocie2.png";
+
 // id 22 - Plantes (besoin des images)
 import Plantes from "@/public/assets/Illustration/Plantes.jpg";
 // id 23 - Refonte Grindstone (besoin des images)
@@ -106,7 +116,10 @@ import Chien from "@/public/assets/photographie/Chien.png";
 // id 44 - Lac d'Aigue Belette (besoin de l'image)
 import Lac from "@/public/assets/photographie/Lac.png";
 // id 45 - Shooting en nature (besoin de l'image)
+import ShootingNature from "@/public/assets/photographie/Shooting.png";
 // id 46 - À la fenêtre (besoin de l'image)
+import Fenetre from "@/public/assets/photographie/fenêtre.png";
+
 // id 47 - Ghost (besoin de l'image)
 import Ghost from "@/public/assets/photographie/Ghost.png";
 import Ghost1 from "@/public/assets/photographie/Ghost1.jpg";
@@ -294,7 +307,7 @@ const galleryProjects = [
       "Pour notre projet de fin de deuxième année, nous avons dû réaliser en groupe un court-métrage d’environ 45 secondes, développé tout au long de l’année.",
     fullDescription:
       "Pour notre projet de fin de deuxième année, nous avons dû réaliser en groupe un court-métrage d’environ 45 secondes, développé tout au long de l’année. La thématique imposée était la création d’un environnement sur le thème du laboratoire, mais nous avions carte blanche pour le reste du projet. Nous avons alors imaginé l’histoire d’un robot qui se réveille dans un laboratoire abandonné, à court d’énergie. Il part à la recherche d’une source de recharge, mais au fil de son exploration, il découvre des éléments de plus en plus étranges. En entendant un bruit inquiétant, il décide d’en trouver la source… avant de se retrouver face à un monstre qui finit par le détruire. Sur ce projet, j’ai réalisé l’ensemble des concepts 2D des assets ainsi que les concepts de colorisation. J’ai ensuite modélisé une partie des éléments choisis, puis assuré le texturing complet, aussi bien pour les assets que pour les personnages (le monstre, la pie et le robot). Enfin, j’ai également pris en charge le montage audio du court-métrage. Ce projet a été réalisé en collaboration avec Gauthier Picherit Brisset et Nicolas Granier.",
-    images: [ Affiche ,Rendu, Rendu1, Rendu2,,"https://www.youtube.com/watch?v=5CIEhrr6jHY","https://www.youtube.com/watch?v=1f0ODLj8FxE"],
+    images: [ Affiche , "https://www.youtube.com/watch?v=aIlPjf8IwAI", Rendu, Rendu1, Rendu2,"https://www.youtube.com/watch?v=5CIEhrr6jHY","https://www.youtube.com/watch?v=1f0ODLj8FxE"],
     tags: ["3D", "Character Design", "Environnement", "Texturing", "Concept", "Props", "Sculpt", "Stylised", "Animation", "Rig&skin", "Lighting", "2024", "2025", "Hand Painting"],
     software: "Maya - Substance Painter - Unreal - Premiere Pro, CLIP STUDIO PAINT - Pro Create - Zbrush",
   },
@@ -310,6 +323,19 @@ const galleryProjects = [
     images: ["https://www.youtube.com/watch?v=FvR-aI4sMMU"],
     tags: ["3D", "Environnement", "Texturing", "Props", "Animation", "Lighting", "2025"],
     software: "Maya - UEFN  (UNREAL FOR FORNITE) - Premiere Pro",
+  },
+  {
+    id: 16,
+    title: "Projet 48h",
+    category: "Projet Groupe",
+    date: "03/2025",
+    description:
+      "J’ai réalisé ce projet de groupe lors de ma deuxième année d’études. Le but était de créer une vidéo sur le thème du Cham’s Call, en nous inspirant du style et des oeuvres de l’artiste Maurits Cornelis Escher.",
+    fullDescription:
+      "J’ai réalisé ce projet de groupe lors de ma deuxième année d’études. Le but était de créer une vidéo sur le thème du Cham’s Call, en nous inspirant du style et des oeuvres de l’artiste Maurits Cornelis Escher. Nous disposions de 48 heures seulement pour concevoir le projet de A à Z : de l’idée initiale à la production finale. Nous étions une équipe de cinq personnes : Nicolas Granier, Estelle Subra, Gaël Cayssials, Adrian Roques-Valle et moi-même, Florine Perreaut.",
+    images: ["/assets/animation/ChasmsCall.mp4", "/assets/animation/Cham's Call Challenge _1_1.mp4",],
+    tags: ["3D", "Environnement", "Texturing", "Props", "Animation", "Rig & Skin", "Lighting", "2025"],
+    software: "Maya - Substance Painter - Unreal - Premiere Pro",
   },
   {
     id: 13,
@@ -336,19 +362,7 @@ const galleryProjects = [
     tags: ["3D", "Texturing", "Props", "Sculpt", "2023"],
   },
   
-  {
-    id: 16,
-    title: "Projet 48h",
-    category: "Projet Groupe",
-    date: "03/2025",
-    description:
-      "J’ai réalisé ce projet de groupe lors de ma deuxième année d’études. Le but était de créer une vidéo sur le thème du Cham’s Call, en nous inspirant du style et des oeuvres de l’artiste Maurits Cornelis Escher.",
-    fullDescription:
-      "J’ai réalisé ce projet de groupe lors de ma deuxième année d’études. Le but était de créer une vidéo sur le thème du Cham’s Call, en nous inspirant du style et des oeuvres de l’artiste Maurits Cornelis Escher. Nous disposions de 48 heures seulement pour concevoir le projet de A à Z : de l’idée initiale à la production finale. Nous étions une équipe de cinq personnes : Nicolas Granier, Estelle Subra, Gaël Cayssials, Adrian Roques-Valle et moi-même, Florine Perreaut.",
-    images: ["/assets/animation/ChasmsCall.mp4", "/assets/animation/Cham's Call Challenge _1_1.mp4",],
-    tags: ["3D", "Environnement", "Texturing", "Props", "Animation", "Rig & Skin", "Lighting", "2025"],
-    software: "Maya - Substance Painter - Unreal - Premiere Pro",
-  },
+  
   
   // 2D PROJECT
 {
@@ -360,7 +374,7 @@ const galleryProjects = [
       "J’ai réalisé ce dessin dans le cadre d’un concours entre amis sur le thème d’Among Us.",
     fullDescription:
       "J’ai réalisé ce dessin dans le cadre d’un concours entre amis sur le thème d’Among Us. L’objectif était de représenter son personnage dans l’univers du jeu vidéo, en apportant sa propre interprétation créative.",
-    images: [AmonUsPictures],
+    images: [AmonUsPictures, AmongUs1, AmongUs2],
     tags: ["2D", "Character Design", "Environnement" , "Texturing ", "Concept ", "Anime Style", "Lighting", "Hand Painting", "Digital Painting", "2024"],
     software: "CLIP STUDIO PAINT",
   },
@@ -386,7 +400,7 @@ const galleryProjects = [
       "J’ai réalisé ce dessin dans le but de m’entraîner à l’anatomie ainsi qu’au lighting.",
     fullDescription:
       "J’ai réalisé ce dessin dans le but de m’entraîner à l’anatomie ainsi qu’au lighting. Pour ce projet, je suis complètement sortie de ma zone de confort, en expérimentant plusieurs techniques de colorisation pour obtenir le rendu souhaité. J’ai également effectué de nombreuses recherches anatomiques et sollicité plusieurs retours critiques, afin de créer une représentation juste et cohérente d’un corps féminin musclé. Ce travail m’a permis de progresser tant sur la précision anatomique que sur la maîtrise de la lumière et des volumes.",
-    images: [OCAmichii],
+    images: [OCAmichii, OCAmichii1, OCAmichii2],
     tags: ["2D", "Character Design", "Concept", "Anime Style", "Digital Painting", "Hand Painting", "Lighting", "2025"],
     software: "CLIP STUDIO PAINT",
   },
@@ -399,7 +413,7 @@ const galleryProjects = [
       "J’ai réalisé ce dessin pour illustrer la page de couverture du livre que j’écris, intitulé Les Dissociés, un projet qui me tient à cœur depuis près de cinq ans.",
     fullDescription:
       "J’ai réalisé ce dessin pour illustrer la page de couverture du livre que j’écris, intitulé Les Dissociés, un projet qui me tient à cœur depuis près de cinq ans. Mon objectif était de représenter les deux personnages principaux au centre d’une plaine vide, seules face à elles-mêmes. Elles se tiennent la main, symbolisant un lien particulier, même dans la solitude et l’immensité qui les entourent. Ce projet m’a permis de travailler à la fois la composition, l’ambiance et l’émotion, afin de traduire visuellement la profondeur et la sensibilité de mon récit tout en présentant les personnages les plus important. ",
-    images: [Dissociés],
+    images: [Dissociés, Dissociés1, Dissociés2],
     tags: ["2D", "Character Design", "Environnement", "Concept", "Anime Style", "Lighting", "Digital Painting", "2024"],
     software: "CLIP STUDIO PAINT",
   },
@@ -691,7 +705,7 @@ const galleryProjects = [
       "Lors d’un shooting photo avec une amie, j’ai trouvé cette image particulièrement intéressante.",
     fullDescription:
       "Lors d’un shooting photo avec une amie, j’ai trouvé cette image particulièrement intéressante. Le modèle est presque centré, posé de trois quarts face à l’appareil, et le décor naturel en arrière-plan apporte une harmonie visuelle et une ambiance agréable à regarder. Cette photo m’a permis de travailler la composition, la pose et l’intégration du sujet dans son environnement, tout en capturant un moment naturel et esthétiquement plaisant.",
-    images: ["/assets/photographie/Shooting.jpg"],
+    images: [ShootingNature],
     tags: ["Photographie", "Personne"],
   },
   {
@@ -703,7 +717,7 @@ const galleryProjects = [
       "J’ai réalisé un autre shooting avec la même personne, qui se plaçait devant une fenêtre.",
     fullDescription:
       "J’ai réalisé un autre shooting avec la même personne, qui se plaçait devant une fenêtre. Les rayons du soleil rendaient le sujet partiellement dans l’ombre, laissant apparaître quelques points lumineux subtils.Le sujet respecte la règle des tiers, avec une silhouette qui se détache du reste de l’image, et la seule touche de lumière venant du bleu du ciel à travers la fenêtre.",
-    images: ["/assets/photographie/fenêtre.jpg"],
+    images: [Fenetre],
     tags: ["Photographie", "Personne"],
   },
   {

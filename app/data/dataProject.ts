@@ -376,7 +376,7 @@ const galleryProjects = [
       "J’ai réalisé ce dessin dans le cadre d’un concours entre amis sur le thème d’Among Us.",
     fullDescription:
       "J’ai réalisé ce dessin dans le cadre d’un concours entre amis sur le thème d’Among Us. L’objectif était de représenter son personnage dans l’univers du jeu vidéo, en apportant sa propre interprétation créative.",
-    images: [AmonUsPictures, AmongUs1, AmongUs2],
+    images: [AmonUsPictures, AmongUs2, AmongUs1],
     tags: ["2D", "Character Design", "Environnement" , "Texturing ", "Concept ", "Anime Style", "Lighting", "Hand Painting", "Digital Painting", "2024"],
     software: "CLIP STUDIO PAINT",
   },

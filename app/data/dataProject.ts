@@ -21,11 +21,18 @@ import SOT1 from "@/public/assets/sculpt 3D/SOT1.jpg";
 import SOT2 from "@/public/assets/sculpt 3D/SOT2.jpg";
 // id 9
 import Calico from "@/public/assets/sculpt 3D/calico.jpg";
+import Calico1 from "@/public/assets/new-img/calico1.jpg";
+import Calico4 from "@/public/assets/new-img/calico.jpg";
+import Calico2 from "@/public/assets/new-img/calico2.jpg";
+import Calico3 from "@/public/assets/new-img/calico3.jpg";
+
 // id 10
 import SculptCrane from "@/public/assets/sculpt 3D/SculptCrane.png";
 // id 11
 import Robot from "@/public/assets/texturing/Robot.png";
 import Robot1 from "@/public/assets/texturing/Robot1.png";
+import Robot2 from "@/public/assets/new-img/Robot2.png";
+import Robot3 from "@/public/assets/new-img/Robot3.png";
 // id 12
 import Rendu from "@/public/assets/texturing/Rendu.png";
 import Rendu1 from "@/public/assets/texturing/Rendu1.png";
@@ -38,6 +45,9 @@ import Sculpt2 from "@/public/assets/sculpture/Sculpt2.jpg";
 // id 14
 import DemonFruit from "@/public/assets/sculpture/DemonFruit.jpg";
 // id 15 - Projet YES YNOV (vidéo YouTube)
+import Fortnite1 from "@/public/assets/new-img/fortnite_1.png";
+import Fortnite2 from "@/public/assets/new-img/fortnite_2.png";
+import Fortnite3 from "@/public/assets/new-img/fortnite_3.png";
 // id 16 - Projet 48h (vidéos mp4)
 // id 17 - Chevalier de la Clochette Ronde
 import Chevalier1 from "@/public/assets/3d/Chevalier1.png";
@@ -127,7 +137,10 @@ import Ghost from "@/public/assets/photographie/Ghost.png";
 import Ghost1 from "@/public/assets/photographie/Ghost1.jpg";
 import Ghost2 from "@/public/assets/photographie/Ghost2.jpg";
 // id 48
-import Asset from "@/public/assets/texturing/Asset.png";
+import Asset from "@/public/assets/new-img/amichii-asset-03.png";
+import Asset1 from "@/public/assets/new-img/amichii-asset-01.png";
+import Asset2 from "@/public/assets/new-img/amichii-asset-02.png";
+
 
 const galleryProjects = [
   {
@@ -244,7 +257,7 @@ const galleryProjects = [
       "Au passage vers ma troisième année d’études, j’ai réalisé un projet personnel consistant en le sculpt d’un petit chat, que j’ai nommé Calico (en référence à son pelage tricolore typique des chats « calico »).",
     fullDescription:
       "Au passage vers ma troisième année d’études, j’ai réalisé un projet personnel consistant en le sculpt d’un petit chat, que j’ai nommé Calico (en référence à son pelage tricolore typique des chats « calico »). J’ai intégré ce personnage dans un environnement de camping, afin de créer une scène à la fois douce et vivante. Ce projet m’a permis de travailler l’ensemble du processus de création 3D, depuis le sculpt jusqu’à l’animation et le rendu final. Il m’a également offert l’occasion d’approfondir ma compréhension du workflow complet d’un personnage animé, tout en développant mon sens artistique et ma mise en scène.",
-    images: [Calico],
+    images: [ Calico1, Calico, Calico2, Calico3, Calico4],
     tags: ["3D", "Character Design", "Texturing", "Sculpt", "Stylised", "Animation", "Rig & Skin", "2025"],
     software: "Zbrush - Maya - Substance Painter",
   },
@@ -283,7 +296,7 @@ const galleryProjects = [
       "J’ai réalisé le texturing du robot NEX0 entièrement à la main, afin de lui donner un effet handpainting.",
     fullDescription:
       "J’ai réalisé le texturing du robot NEX0 entièrement à la main, afin de lui donner un effet handpainting. L’objectif était de créer un rendu abîmé par le temps, avec des traces d’usure et des zones rongées par la mousse, pour renforcer l’impression d’un robot laissé à l’abandon dans le laboratoire.",
-    images: [Robot, Robot1],
+    images: [Robot, Robot1, Robot2, Robot3],
     tags: ["3D", "2D", "Character Design", "Texturing", "Concept", "Stylised", "Animation", "Rig & Skin", "2025"],
     software: "Maya - Substance Painter",
   },
@@ -296,7 +309,7 @@ const galleryProjects = [
       "Voici l’un des assets que j’ai texturé pour notre projet final.",
     fullDescription:
       "Voici l’un des assets que j’ai texturé pour notre projet final. Nous avons opté pour un style handpainting, et cet asset étant l’un des plus colorés de la scène, il était important que ses couleurs restent chaudes pour renforcer l’harmonie et l’ambiance générale.",
-    images: [Asset],
+    images: [Asset, Asset1, Asset2],
     tags: ["3D", "Texturing", "Props", "Stylised", "Hand Painting", "2025"],
     software: "Maya - Substance Painter",
   },
@@ -322,7 +335,7 @@ const galleryProjects = [
       "Lors de notre deuxième année d’études, l’école YNOV nous a proposé un concours en partenariat avec EPIC GAMES sur leur jeu Fortnite.",
     fullDescription:
       "Lors de notre deuxième année d’études, l’école YNOV nous a proposé un concours en partenariat avec EPIC GAMES sur leur jeu Fortnite.L’objectif était de réaliser une map jouable en utilisant les assets du jeu sur UNREAL FOR FORTNITE. Avec notre groupe, nous avons créé un environnement inspiré d’Alice au pays des merveilles et d’Alice de l’autre côté du miroir. Nous avons imaginé un grand manoir rempli de références à l’univers, et conçu un gameplay mêlant Prop Hunt et Murder (inspiré du jeu Garry’s Mod) : le but était pour les joueurs de se cacher en objets afin d’échapper au chasseur, tandis que l’un d’entre eux pouvait récupérer une arme dans le monde inversé, de l’autre côté du miroir, pour éliminer le chasseur. Notre projet a été sélectionné et nous avons eu la chance de présenter notre map à Paris, sur le campus YNOV Paris. Bien que nous n’ayons pas remporté le prix final, cette expérience a été extrêmement enrichissante et stimulante. Nous étions quatre à réaliser ce projet : Estelle Subra, Cam’ron Givord, Yanis Rebeihi et moi, Florine Perreaut.",
-    images: ["https://www.youtube.com/watch?v=FvR-aI4sMMU"],
+    images: ["https://www.youtube.com/watch?v=FvR-aI4sMMU", Fortnite1, Fortnite2, Fortnite3],
     tags: ["3D", "Environnement", "Texturing", "Props", "Animation", "Lighting", "2025"],
     software: "Maya - UEFN  (UNREAL FOR FORNITE) - Premiere Pro",
   },

@@ -45,10 +45,10 @@ export default function GalleryPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl pb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Tout mes projets !
+            Tous mes projets !
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Une collection de tout les projets réalisés
+            Une collection de tous les projets réalisés
           </p>
         </div>
 
@@ -84,9 +84,10 @@ export default function GalleryPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => {
-            const firstMedia = project.images[0];
-            const mediaUrl =
-              typeof firstMedia === "string" ? firstMedia : firstMedia.src;
+            const firstMedia = project.images[0]!;
+const mediaUrl =
+  typeof firstMedia === "string" ? firstMedia : firstMedia.src;
+
 
             const isYouTube =
               mediaUrl.includes("youtube.com") || mediaUrl.includes("youtu.be");

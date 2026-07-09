@@ -23,6 +23,15 @@
 # misc
 .DS_Store
 *.pem
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.log
+.github
 
 # debug
 npm-debug.log*

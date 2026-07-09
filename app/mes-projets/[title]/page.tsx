@@ -11,7 +11,7 @@ import { useParams } from "next/navigation";
 const slugify = (str: string) =>
   str
     .toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") 
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
@@ -73,16 +73,23 @@ export default function ProjectDetailPage() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-8">
-          
           <div className="space-y-4">
-            <div className="flex flex-wrap items-start gap-4">
-              <h1 className="text-4xl md:text-5xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <div className="flex flex-wrap items-center gap-4">
+              <h1 className="text-4xl md:text-5xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent leading-tight pb-1">
                 {projectDetails.title}
               </h1>
+
               <span className="px-4 py-2 mt-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full text-sm shadow-lg">
                 {projectDetails.category}
               </span>
+
+              {projectDetails.enCours && (
+                <span className="px-4 py-2 mt-2 bg-white border border-rose-500 text-rose-500 rounded-full text-sm shadow-lg">
+                  Projet en cours
+                </span>
+              )}
             </div>
+
 
             <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-2">
@@ -95,7 +102,27 @@ export default function ProjectDetailPage() {
           <div className="relative group">
             <div className="aspect-video relative rounded-3xl overflow-hidden border-2 border-primary/20 shadow-2xl bg-gradient-to-br from-primary/5 to-secondary/5">
               {(() => {
-                const currentMedia = projectDetails.images[currentImageIndex];
+                const images = projectDetails.images ?? [];
+
+                if (images.length === 0) {
+                  return (
+                    <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                      Aucun média disponible pour ce projet.
+                    </div>
+                  );
+                }
+
+                const currentMedia =
+                  images[currentImageIndex] ?? images[0];
+
+                if (!currentMedia) {
+                  return (
+                    <div className="w-full h-full flex items-center justify-center text-muted-foreground">
+                      Média introuvable.
+                    </div>
+                  );
+                }
+
                 const mediaUrl =
                   typeof currentMedia === "string" ? currentMedia : currentMedia.src;
 
@@ -112,9 +139,8 @@ export default function ProjectDetailPage() {
                   if (mediaUrl.includes("youtube.com")) {
                     embedUrl = mediaUrl.replace("watch?v=", "embed/");
                   } else {
-                    embedUrl = `https://www.youtube.com/embed/${
-                      mediaUrl.split("youtu.be/")[1]
-                    }`;
+                    embedUrl = `https://www.youtube.com/embed/${mediaUrl.split("youtu.be/")[1]
+                      }`;
                   }
 
                   return (
@@ -149,6 +175,7 @@ export default function ProjectDetailPage() {
                 );
               })()}
 
+
               {projectDetails.images.length > 1 && (
                 <>
                   <button
@@ -171,25 +198,71 @@ export default function ProjectDetailPage() {
 
           {projectDetails.images.length > 1 && (
             <div className="grid grid-cols-4 md:grid-cols-6 gap-4">
-              {projectDetails.images.map((image, index) => {
-                const url = typeof image === "string" ? image : image.src;
-                console.log("Slug = ", slugify(projectDetails.title));
+              {projectDetails.images.length > 1 && (
+                <div className="grid grid-cols-4 md:grid-cols-6 gap-4">
+                  {projectDetails.images.map((image, index) => {
+                    if (!image) return null;
 
-                return (
-                  
-                  <button
-                    key={index}
-                    onClick={() => goToImage(index)}
-                    className={`aspect-square relative rounded-xl overflow-hidden border-2 transition-all ${
-                      index === currentImageIndex
-                        ? "border-primary shadow-lg shadow-primary/30"
-                        : "border-primary/20 hover:border-primary/40"
-                    }`}
-                  >
-                    <Image src={url} alt="" fill className="object-cover" />
-                  </button>
-                );
-              })}
+                    const rawUrl = typeof image === "string" ? image : image.src;
+
+                    const isYouTube =
+                      rawUrl.includes("youtube.com") || rawUrl.includes("youtu.be");
+                    const isVideo =
+                      rawUrl.endsWith(".mp4") ||
+                      rawUrl.endsWith(".webm") ||
+                      rawUrl.endsWith(".mov");
+
+                    let youtubeThumb: string | null = null;
+                    if (isYouTube) {
+                      let youtubeId = "";
+                      if (rawUrl.includes("youtube.com")) {
+                        youtubeId = rawUrl.split("v=")[1]?.split("&")[0] || "";
+                      } else if (rawUrl.includes("youtu.be")) {
+                        youtubeId = rawUrl.split("youtu.be/")[1]?.split("?")[0] || "";
+                      }
+
+                      if (youtubeId) {
+                        youtubeThumb = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
+                      }
+                    }
+
+                    return (
+                      <button
+                        key={index}
+                        onClick={() => goToImage(index)}
+                        className={`aspect-square relative rounded-xl overflow-hidden border-2 transition-all ${index === currentImageIndex
+                          ? "border-primary shadow-lg shadow-primary/30"
+                          : "border-primary/20 hover:border-primary/40"
+                          }`}
+                      >
+                        {isYouTube && youtubeThumb ? (
+                          <Image
+                            src={youtubeThumb}
+                            alt=""
+                            fill
+                            className="object-cover"
+                          />
+                        ) : isVideo ? (
+                          <video
+                            src={rawUrl}
+                            className="w-full h-full object-cover"
+                            muted
+                            playsInline
+                          />
+                        ) : (
+                          <Image
+                            src={rawUrl}
+                            alt=""
+                            fill
+                            className="object-cover"
+                          />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+
             </div>
           )}
 

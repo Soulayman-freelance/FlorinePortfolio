@@ -19,6 +19,14 @@ export function Experience() {
       highlight: "",
     },
     {
+      title: "Stage au centre de simulation environnementale neuro-sensorielle",
+      school: "Hopital de Purpan",
+      period: "20 avril - 17 juillet 2026",
+      description:
+        "Pendant plus de trois mois, j'ai participé à la création d'environnements 3D réalistes destinés à des simulations de formation pour des professionnels, notamment des infirmiers, des pompiers et des militaires. Ces environnements étaient projetés sur les trois murs d'une salle immersive afin de reproduire des situations réalistes. J'ai notamment réalisé un sous-marin complet (modélisation 3D et texturing) ainsi qu'une ambulance (modélisation 3D, texturing, rigging et skinning).",
+      highlight: "",
+    },
+    {
       title: "Stage Secteur Maxillo Faciale",
       school: "Hopital de Purpan",
       period: "6 janvier - 6 mars 2025",

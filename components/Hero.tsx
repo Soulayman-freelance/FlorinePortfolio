@@ -53,7 +53,7 @@ export function Hero() {
                 size="lg"
                 className="gap-2 shadow-lg shadow-primary/20"
               >
-                Parlons enssemble ! <ArrowRight size={20} />
+                Parlons ensemble ! <ArrowRight size={20} />
               </Button>
               <Button
                 onClick={scrollToProjects}
